@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Mvn clean and test') {
             tools {
-                jdk "jdk-1.8.101"
+                jdk "JDK904"
             }
             steps {
                 withMaven(maven: 'Maven_3_6_3') {
