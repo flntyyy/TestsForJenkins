@@ -1,12 +1,13 @@
-node('worker_node1') {
-    stage('Mvn Compile') {
-    cleanWs ()
-        withMaven(maven:'Maven_3_6_3') {
-            sh 'mvn clean test'
+pipeline {
+    agent any
+        stages {
+            stage('Mvn Compile') {
+                withMaven(maven:'Maven_3_6_3') {
+                    sh 'mvn clean test'
             }
         }
 
-stage('CleanUp') {
-        cleanWs ()
+    post {
+        always{cleanWs ()
         }
 }
