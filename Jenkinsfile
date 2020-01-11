@@ -1,12 +1,5 @@
-pipeline {
-    agent any
-    tools {
-        maven 'Maven 3.3.9'
-        jdk 'jdk8'
-    }
-    stages {
-       stage('Source') {
-        sh 'mvn -Dtest=Tests test'
-         }
-    }
+node('worker_node1') {
+stage('Source') {
+sh 'mvn -Dtest=Tests test'
+  }
 }
