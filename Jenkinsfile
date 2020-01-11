@@ -1,7 +1,6 @@
-
+node('worker_node1') {
 stage('Source') {
-node {
- withMaven(maven:'Maven_3_6_3', mavenLocalRepo: '.repository') {
+ withMaven(maven:'Maven_3_6_3') {
       sh 'mvn clean install'
   }
   }
