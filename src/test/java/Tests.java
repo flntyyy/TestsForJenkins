@@ -13,7 +13,7 @@ public class Tests {
 
     @Test
     void additionError() {
-        assertEquals(14, 1 + 13);
+        assertEquals(10, 1 + 9);
     }
 
 }
