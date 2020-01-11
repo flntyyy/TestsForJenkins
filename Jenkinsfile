@@ -11,13 +11,6 @@ pipeline {
                 }
             }
         }
-        stage('Mvn install') {
-            steps {
-                withMaven(maven: 'Maven_3_6_3') {
-                    sh 'mvn install'
-                }
-            }
-        }
     }
     post {
         always {
