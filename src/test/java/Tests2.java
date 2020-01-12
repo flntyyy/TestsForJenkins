@@ -23,7 +23,7 @@ public class Tests2 {
 
     @Test
     void additionError() {
-        assertEquals(10, 1 + 91);
+        assertEquals(10, 1 + 9);
     }
 
 }
